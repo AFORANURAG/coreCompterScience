@@ -1,11 +1,9 @@
 package main
-
 import (
 	"fmt"
 	"sync"
 	"time"
 )
-
 type AsyncQueue struct {
 	queue   chan interface{}
 	closeCh chan struct{}

@@ -67,7 +67,6 @@ func (b *Balancer) completed(w *Worker) {
 	heap.Push(&b.pool, w)
 }
 
-// Placeholder functions
 func workFn() int {
 	return 42
 }
@@ -95,6 +94,5 @@ func main() {
 	go b.balance(make(chan Request))
 	go requester(make(chan Request))
 
-	// Run the program indefinitely
 	select {}
 }
